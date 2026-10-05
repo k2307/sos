@@ -1,0 +1,9 @@
+iptables k liye commands 
+sudo iptables -A <CHAIN> -s <SOURCE_IP/subnet> -p <PROTOCOL> --dport <PORT> -j ACCEPT/DROP
+
+to view
+sudo iptables -L 
+
+eg.
+
+sudo iptables -A INPUT  -s 192.168.29.226/32 -p TCP --dport 22 -j DROP

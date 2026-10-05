@@ -1,0 +1,11 @@
+chmod <numer> <file> 
+
+
+
+
+Numbers            Use
+
+0 		No permission
+1 		Execute
+2 		Write
+4 		Read

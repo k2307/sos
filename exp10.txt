@@ -1,0 +1,12 @@
+View logs from the current boot:
+sudo journalctl -b
+sudo journalctl
+
+
+Auditd
+sudo apt install auditd
+sudo systemctl start auditd
+
+sudo ausearch -ts today
+
+-> Stored in /var/log/audit/audit.log
