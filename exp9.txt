@@ -1,11 +1,16 @@
-chmod <numer> <file> 
+see which services are running:
+systemctl --type=service --state=running
 
+Disable an unnecessary service, for example:
+sudo systemctl disable --now bluetooth
 
+Secure SSH
+Edit the SSH configuration:
+sudo nano /etc/ssh/sshd_config
 
+and set
+PermitRootLogin no
+PasswordAuthentication no
 
-Numbers            Use
-
-0 		No permission
-1 		Execute
-2 		Write
-4 		Read
+then restart ssh 
+sudo systemctl restart ssh
