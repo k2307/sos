@@ -7,3 +7,17 @@ sudo iptables -L
 eg.
 
 sudo iptables -A INPUT  -s 192.168.29.226/32 -p TCP --dport 22 -j DROP
+
+Z
+whoami
+id
+sudo adduser smruti
+sudo passwd smruti
+sudo cat /etc/shadow
+sudo chage -l smruti 
+sudo ufw status
+sudo ufw enable
+sudo ufw disable
+sudo ufw allow 22/tcp
+sudo iptables -L -n -v
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
