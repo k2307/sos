@@ -10,3 +10,23 @@ sudo systemctl start auditd
 sudo ausearch -ts today
 
 -> Stored in /var/log/audit/audit.log
+
+Z
+sudo apt install auditd audispd-plugins -y
+sudo systemctl status auditd
+sudo systemctl start auditd
+sudo cat /var/log/audit/audit.log
+sudo ausearch -m USER_LOGIN
+sudo aureport -au
+sudo aureport -l
+sudo aureport -x
+sudo auditctl -w /etc/shadow -p r -k shadow_access
+sudo ausearch -k passwd_changes
+sudo journalctl
+sudo journalctl --since today
+sudo journalctl -u ssh
+sudo grep -i "failed" /var/log/auth.log
+sudo aureport > system_audit_report.txt
+cat  system_audit_report.txt
+sudo ausearch -m USER_LOGIN > login_events.txt
+cat login_events.txt
