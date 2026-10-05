@@ -1,16 +1,9 @@
-see which services are running:
-systemctl --type=service --state=running
+iptables k liye commands 
+sudo iptables -A <CHAIN> -s <SOURCE_IP/subnet> -p <PROTOCOL> --dport <PORT> -j ACCEPT/DROP
 
-Disable an unnecessary service, for example:
-sudo systemctl disable --now bluetooth
+to view
+sudo iptables -L 
 
-Secure SSH
-Edit the SSH configuration:
-sudo nano /etc/ssh/sshd_config
+eg.
 
-and set
-PermitRootLogin no
-PasswordAuthentication no
-
-then restart ssh 
-sudo systemctl restart ssh
+sudo iptables -A INPUT  -s 192.168.29.226/32 -p TCP --dport 22 -j DROP
